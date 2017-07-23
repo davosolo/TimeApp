@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>TimeApp</ion-title>
   </ion-navbar>
 
@@ -15,7 +15,13 @@
 
 <ion-content padding>
   <p>Welcome to TimeApp, in here you can create your workout routines the way you want it!</p>
+  
+  <!--<button color="secondary" ion-button (click)="goToNewRoutine()">Create a New Routine</button>-->
 
-  <button ion-button (click)="goToNewRoutine()">Create a New Routine</button>
-
+  <ion-fab bottom right>
+    <button ion-fab color="secondary" (click)="goToNewRoutine()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  
 </ion-content>

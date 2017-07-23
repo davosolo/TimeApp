@@ -14,11 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewRoutinePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  message: string;
+  name: string = "Let's cardio!";
+
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
+    this.message = this.navParams.get('message');
+    console.log(this.message);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewRoutinePage');
+  goBack(): void {
+    this.navCtrl.pop();
+  }
+
+  saveRoutine(): void {
+    console.log(this.name);
   }
 
 }

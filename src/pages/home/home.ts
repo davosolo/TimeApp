@@ -17,12 +17,10 @@ export class HomePage {
   constructor(private navCtrl: NavController, private navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
-
   goToNewRoutine(): void {
-    this.navCtrl.push('NewRoutinePage');
+    this.navCtrl.push('NewRoutinePage', {
+      message: "Going to New Routine..."
+    });
   }
 
 }

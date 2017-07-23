@@ -1,4 +1,4 @@
-<!--
+yh<!--
   Generated template for the NewRoutinePage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
@@ -6,13 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>NewRoutine</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>New Routine</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Name your routine</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <button color="secondary" ion-button (click)="goBack()">Take me back!</button>
+  <button color="secondary" ion-button (click)="saveRoutine()">Save</button>
 
 </ion-content>
